@@ -22,11 +22,11 @@ git checkout -t origin/gh-pages
 rm -rf *
 
 # Copy website files from real repo
-cp -R ../css .
-cp -R ../js .
-cp -R ../lib .
-cp -R ../plugin .
-cp -R ../*.html .
+cp -R ../reveal/css .
+cp -R ../reveal/js .
+cp -R ../reveal/lib .
+cp -R ../reveal/plugin .
+cp -R ../reveal/*.html .
 
 # Stage all files in git and create a commit
 git add .
