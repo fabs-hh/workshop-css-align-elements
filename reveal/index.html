@@ -350,34 +350,68 @@ div {
 
 
 
-            <!-- Start section Approach 4: Alignemnt with css tables -->
+            <!-- Start section Approach 4: Alignment with css tables -->
             <section>
                 <h2 style="display: none;">Approach 4: Alignment with CSS Tables</h2>
 
                 <section>
                     <h2>Align using CSS Tables</h2>
                 </section>
+
                 <section>
                     <h2>Starting Point</h2>
 
                     <div class="row">
-                        <div class="col-6">
-                            <div class="sl-block" data-block-type="code">
-                                <div class="sl-block-content fragment" data-fragment-index="0">
+                        <div class="col-9">
+                            <div class="fragment" data-fragment-index="0">
 <pre><code>
 <div class="box box_red"></div>
 <div class="box box_green"></div>
 <div class="box box_blue"></div>
 
 </code></pre>
-                                </div>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <img class="sl-block-content fragment" src="img/css-tables/div-boxes.png" height="357" width="127" data-fragment-index="1"
-                                 alt="Boxes without alignment are placed under each over" />
+                        <div class="col-3">
+                            <a class="fragment" href="http://jsfiddle.net/mvoki/wyb1umsb/" target="cssTableExample" title="open example"
+                               data-fragment-index="1">
+                                <img src="img/css-tables/div-boxes.png" height="357" width="127"
+                                     alt="Boxes without alignment are placed under each over" /><br />
+                                    <small data-fragment-index="1">example</small></a>
                         </div>
                     </div>
+                </section>
+
+                <section>
+                    <h2>Define table and columns</h2>
+                    <p class="fragment" data-fragment-index="0">Wrapp boxes in a &lt;div&gt;</p>
+                    <div class="fragment" data-fragment-index="1">
+<pre><code><div class="table">
+    <div class="box box_red column"></div>
+    <div class="box box_green column"></div>
+    <div class="box box_blue column"></div>
+</div></code></pre>
+                    </div>
+
+                    <div class="fragment" data-fragment-index="2">
+<pre><code>.table {
+    display: table;
+}
+.column {
+    display: table-cell;
+}</code></pre>
+                    </div>
+                    <a class="fragment" href="http://jsfiddle.net/mvoki/wyb1umsb/16/" target="cssTableExample"
+                       title="open table example step1" data-fragment-index="3">
+                        <img src="img/css-tables/div-boxes-table.png" height="128" width="355"
+                             alt="Boxes with the very first left alignment to each other" /><br />
+                        <small>example</small></a>
+                </section>
+
+                <section>
+                    <h2>Alignment of content in columns</h2>
+                    <p class="fragment" data-fragment-index="0">set vertical alignment</p>
+
                 </section>
 
             </section><!-- end section Approach 4: Alignment with css tables -->
