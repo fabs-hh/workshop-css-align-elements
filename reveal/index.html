@@ -38,8 +38,7 @@
 
     <body>
 
-        <div class="reveal">
-
+        <div class="reveal fabs-hh">
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
@@ -462,8 +461,94 @@ div {
 
                 <section>
                     <h2>Alignment of content in columns</h2>
-                    <p class="fragment" data-fragment-index="0">set vertical alignment</p>
+                    <p class="fragment" data-fragment-index="0">
+                        Set vertical alignment
+                        <small class="hljs-comment"> -- too simple! --</small>
+                    </p>
+                    <div class="fragment" data-fragment-index="0">
+<pre><code>.column {
+    ...
+    vertical-align: middle;
+}</code></pre>
+                    </div>
+                   <a class="fragment" href="http://jsfiddle.net/mvoki/wyb1umsb/23/" target="cssTableExample"
+                       title="vertical alignment of elements in a cell" data-fragment-index="1">
+                        <img src="img/css-tables/div-boxes-valignment.png" height="239" width="352"
+                             alt="Boxes with vertical aligned content" /><br />
+                        <small>example</small></a>
+                </section>
 
+                <section>
+                    <h2>Equal divided columns</h2>
+                    <p class="fragment" data-fragment-index="0">Set fix table layout and define the width of table</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="fragment" data-fragment-index="0">
+<pre><code><div class="table">
+    <div class="row">
+        <div class="box .. column">Box1</div>
+        <div class="box .. column">
+            Box2 contains.some.more.text
+            then we other ones
+        </div>
+        <div class="box .. column">Box3</div>
+    </div>
+    ...
+</div></code></pre>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fragment" data-fragment-index="0">
+<pre><code>.table {
+    ...
+    table-layout: fixed;
+    width: 500px;
+}</code></pre>
+                            </div>
+                            <a class="fragment" href="http://jsfiddle.net/mvoki/wyb1umsb/26/" target="cssTableExample"
+                               title="Equal devided cells example" data-fragment-index="1">
+                                <img src="img/css-tables/div-boxes-equal-devided.png" height="241" width="512"
+                                     alt="Equal devided cells example" /><br />
+                                <small>example</small></a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="">
+                    <h2>Conclusion</h2>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="fragment" data-fragment-index="0">
+                                <h3>Pro</h3>
+                                <ul>
+                                    <li>no need of CSS float layout  in modern browser</li>
+                                    <li>columns of same heights</li>
+                                    <li>vertical alignment of content in cells</li>
+                                    <li>proportional width of columns to fill the available space</li>
+                                    <li>easy reordering of container</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fragment" data-fragment-index="1">
+                                <h3>Contra</h3>
+                                <ul>
+                                    <li>Lack of colspan and rowspan equavalance</li>
+                                    <li>css cellspan can expand in response of the content<br>
+                                        (like in html tables)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>'Want's to know more about CSS Tables...?!</h2>
+                    <p>Have a look into:</p>
+                    <p>
+                        <em>Everything you know abut CSS is wrong!</em><br />
+                        <small>[Rachel Andrew]</small>
+                    </p>
                 </section>
 
             </section><!-- end section Approach 4: Alignment with css tables -->

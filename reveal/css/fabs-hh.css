@@ -1,33 +1,33 @@
-* {
+.fabs-hh * {
     box-sizing: border-box;
 }
-.row:after {
+.fabs-hh .row:after {
     clear: both;
     margin-left: -10px;
     margin-right: -10px;
 }
 
-[class*=col-] {
+.fabs-hh [class*=col-] {
     float: left;
     padding-left: 10px;
     padding-right: 10px;
 }
-.col-8 {
+.fabs-hh  .col-8 {
     width: 66.66666666666667%;
 }
 
-.col-9 {
+.fabs-hh .col-9 {
     width: 75%;
 }
 
-.col-6 {
+.fabs-hh .col-6 {
     width: 50%;
 }
 
-.col-4 {
+.fabs-hh .col-4 {
     width: 33.33333333333333%;
 }
 
-.col-3 {
+.fabs-hh .col-3 {
     width: 25%;
 }
