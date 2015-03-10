@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+.row:after {
+    clear: both;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+[class*=col-] {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.col-8 {
+    width: 66.66666666666667;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-4 {
+    width: 66.33333333333333;
+}
+
+.col-3 {
+    width: 25%;
+}

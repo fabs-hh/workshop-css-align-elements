@@ -16,6 +16,7 @@
               content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
         <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/fabs-hh.css">
         <link rel="stylesheet" href="css/theme/black.css" id="theme">
 
         <!-- Code syntax highlighting -->
@@ -84,15 +85,15 @@ grunt serve
 
                         <p>
                             Align 3 <code>&lt;div&gt;</code>'s in a 3 columns layout.
-                            <img src="svg/layout-three-columns.svg" alt="">
+                            <img src="img/layout-three-columns.svg" alt="">
                         </p>
                     </section>
 
                     <section>
                         <h3>Starting point</h3>
 
-                        <div>
-                            <div style="width:70%;float:left;">
+                        <div class="row">
+                            <div class="col-9">
 <pre><code data-trim contenteditable>
 <div class="red"></div>
 <div class="yellow"></div>
@@ -101,9 +102,9 @@ grunt serve
 
 <pre><code data-trim contenteditable>
 div {
-width: 100px;
-height: 100px;
-border-radius: 6px;
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
 }
 .red { background-color: #d02b41; }
 .yellow { background-color: #ffcc52; }
@@ -111,8 +112,8 @@ border-radius: 6px;
 </code></pre>
                             </div>
 
-                            <div style="width:30%;float:left;">
-                                <img src="svg/layout-three-columns-without-float.svg" alt="">
+                            <div class="col-3">
+                                <img src="img/layout-three-columns-without-float.svg" alt="">
                             </div>
                         </div>
                         <small><a href="http://jsfiddle.net/josketres/n7y585aL/">example</a></small>
@@ -129,12 +130,12 @@ border-radius: 6px;
 <pre>
 <code data-trim contenteditable>
 div {
-...
-float: left;
+    ...
+    float: left;
 }
 </code></pre>
 
-                        <img src="svg/layout-three-columns-float-left.svg" alt="">
+                        <img src="img/layout-three-columns-float-left.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/esnm105p/">example</a></small>
                     </section>
@@ -149,12 +150,12 @@ float: left;
 </code></pre>
 <pre><code data-trim contenteditable>
 div {
-...
-float: right;
+    ...
+    float: right;
 }
 </code></pre>
 
-                        <img src="svg/layout-three-columns-float-right.svg" alt="">
+                        <img src="img/layout-three-columns-float-right.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/b133vL08/">example</a></small>
                     </section>
@@ -168,7 +169,7 @@ float: right;
 <div class="blue"></div>
 <div class="footer"></div>
 </code></pre>
-                        <img src="svg/layout-three-columns-with-footer.svg" alt="">
+                        <img src="img/layout-three-columns-with-footer.svg" alt="">
                     </section>
 
                     <section>
@@ -191,7 +192,7 @@ div {
 }
 </code></pre>
 
-                        <img src="svg/layout-three-columns-with-footer-1.svg" alt="">
+                        <img src="img/layout-three-columns-with-footer-1.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/827rg9qn/">example</a></small>
                         <small><a href="http://jsfiddle.net/josketres/827rg9qn/">example</a></small>
@@ -217,7 +218,7 @@ div {
 
                         <small><code>.footer</code> is not floated anymore, but the <code>div</code>'s are overlapped</small>
                         <br/>
-                        <img src="svg/layout-three-columns-with-footer-2.svg" alt="">
+                        <img src="img/layout-three-columns-with-footer-2.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/a8cavf91/">example</a></small>
                     </section>
@@ -239,7 +240,7 @@ div {
     clear: left;
 }
 </code></pre>
-                        <img src="svg/layout-three-columns-with-footer.svg" alt="">
+                        <img src="img/layout-three-columns-with-footer.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/mLwjvg0t/">example</a></small>
                     </section>
@@ -254,14 +255,14 @@ div {
     <div class="blue box"></div>
 </div>
 </code></pre>
-                        <img src="svg/layout-three-columns-with-container.svg" alt="">
+                        <img src="img/layout-three-columns-with-container.svg" alt="">
                     </section>
 
                     <section>
                         <h3>container style</h3>
-                        <div>
+                        <div class="row">
 
-                            <div style="width:50%; float:left">
+                            <div class="col-6">
 <pre><code data-trim contenteditable>
 <div class="container">
     <div class="red box"></div>
@@ -271,7 +272,7 @@ div {
 </code></pre>
                         </div>
 
-                        <div style="width:50%; float:left">
+                        <div class="col-6">
 <pre><code data-trim contenteditable>
 .box {
     width: 100px;
@@ -290,7 +291,7 @@ div {
 
                         <small>The height of the parent element collapses to nothing! =(</small>
                         <br/>
-                        <img src="svg/layout-three-columns-with-container-1.svg" alt="">
+                        <img src="img/layout-three-columns-with-container-1.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/tfvybush/">example</a></small>
                     </section>
@@ -313,7 +314,7 @@ div {
                         <!-- Note: -->
                         <!-- <div .. /> -> Self-closing syntax (/>) used on a non-void HTML element. Ignoring the slash and treating as a start tag. (W3CValidation) -->
 
-                        <img src="svg/layout-three-columns-with-container-2.svg" alt="">
+                        <img src="img/layout-three-columns-with-container-2.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/r30fdgwx/">example</a></small>
                     </section>
@@ -321,8 +322,8 @@ div {
                     <section>
                         <h3>Clear Floats 2</h3>
 
-                        <div>
-                            <div style="width:50%; float:left">
+                        <div class="row">
+                            <div class="col-6">
 <pre><code data-trim contenteditable>
 <div class="container clearfix">
     <div class="red box"></div>
@@ -331,7 +332,7 @@ div {
 </div>
 </code></pre>
                             </div>
-                            <div style="width:50%; float:left">
+                            <div class="col-6">
 <pre><code data-trim contenteditable>
 .clearfix:after {
     content: ".";
@@ -346,9 +347,40 @@ div {
                         <small><a href="http://jsfiddle.net/josketres/xrkk5733/">example</a></small>
                     </section>
             </section><!-- end explaining floats approach -->
+
+
+
+            <!-- Start section Approach 4: Alignemnt with css tables -->
             <section>
-                <h2>Approach 4: Alignment with CSS Tables</h2>
-            </section>
+                <h2 style="display: none;">Approach 4: Alignment with CSS Tables</h2>
+
+                <section>
+                    <h2>Align using CSS Tables</h2>
+                </section>
+                <section>
+                    <h2>Starting Point</h2>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="sl-block" data-block-type="code">
+                                <div class="sl-block-content fragment" data-fragment-index="0">
+<pre><code>
+<div class="box box_red"></div>
+<div class="box box_green"></div>
+<div class="box box_blue"></div>
+
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <img class="sl-block-content fragment" src="img/css-tables/div-boxes.png" height="357" width="127" data-fragment-index="1"
+                                 alt="Boxes without alignment are placed under each over" />
+                        </div>
+                    </div>
+                </section>
+
+            </section><!-- end section Approach 4: Alignment with css tables -->
         </div>
 
     </div>
