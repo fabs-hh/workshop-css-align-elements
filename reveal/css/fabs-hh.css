@@ -12,12 +12,17 @@
     padding-left: 10px;
     padding-right: 10px;
 }
-.fabs-hh  .col-8 {
-    width: 66.66666666666667%;
+
+.fabs-hh .col-12 {
+    width: 100%;
 }
 
 .fabs-hh .col-9 {
     width: 75%;
+}
+
+.fabs-hh  .col-8 {
+    width: 66.66666666666667%;
 }
 
 .fabs-hh .col-6 {

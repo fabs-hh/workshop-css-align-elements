@@ -42,13 +42,13 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>Exploring alignment techniques</h1>
+                    <h1>exploring alignment techniques</h1>
 
                     <p>flabs-hh</p>
                 </section>
 
                 <section>
-                    <h2>Workspace setup</h2>
+                    <h2>workspace setup</h2>
 <pre><code data-trim>
 sudo npm install -g grunt-cli
 git clone https://github.com/fabs-hh/workshop-css-align-elements.git
@@ -59,37 +59,37 @@ grunt serve
                 </section>
 
                 <section>
-                    <h2>Agenda</h2>
+                    <h2>AGENDA</h2>
                     <ul>
-                        <li>Introduction</li>
-                        <li>Approach 1: Inline-Blocks</li>
-                        <li>Approach 2: CSS-Columns</li>
-                        <li>Approach 3: Floats</li>
-                        <li>Approach 4: CSS Tables</li>
-                        <li>Approach 5 : CSS Flexbox</li>
+                        <li>introduction</li>
+                        <li>approach 1: inline-blocks</li>
+                        <li>approach 2: css-columns</li>
+                        <li>approach 3: floats</li>
+                        <li>approach 4: css tables</li>
+                        <li>approach 5 : css flexbox</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Introduction</h2>
 
-                    <p>Explore different ways to align/arrange elements in columns in html</p>
+                    <p>explore different ways to align/arrange elements in columns in html</p>
                     <img src="http://css-tricks.com/wp-content/csstricks-uploads/web-layout.png" alt="">
                 </section>
 
                 <section>
                     <h2 style="display: none;">Approach 3: Alignment with Floats</h2>
                     <section>
-                        <h2>Align using floats</h2>
+                        <h2>align using floats</h2>
 
                         <p>
-                            Align 3 <code>&lt;div&gt;</code>'s in a 3 columns layout.
+                            align 3 <code>&lt;div&gt;</code>'s in a 3 columns layout.
                             <img src="img/layout-three-columns.svg" alt="">
                         </p>
                     </section>
 
                     <section>
-                        <h3>Starting point</h3>
+                        <h3>starting point</h3>
 
                         <div class="row">
                             <div class="col-9">
@@ -288,7 +288,7 @@ div {
                             </div>
                         </div>
 
-                        <small>The height of the parent element collapses to nothing! =(</small>
+                        <small>the height of the parent element collapses to nothing! =(</small>
                         <br/>
                         <img src="img/layout-three-columns-with-container-1.svg" alt="">
                         <br />
@@ -296,9 +296,9 @@ div {
                     </section>
 
                     <section>
-                        <h3>Clear Floats 1</h3>
+                        <h3>clear floats 1</h3>
 
-                        <small>The collapse problem can be fixed by clearing the floats <strong>after</strong> the floated
+                        <small>the collapse problem can be fixed by clearing the floats <strong>after</strong> the floated
                             elements in the container, but <strong>before</strong> the close of the container.
                         </small>
 <pre><code data-trim contenteditable>
@@ -319,7 +319,7 @@ div {
                     </section>
 
                     <section>
-                        <h3>Clear Floats 2</h3>
+                        <h3>clear floats 2</h3>
 
                         <div class="row">
                             <div class="col-6">
@@ -351,10 +351,10 @@ div {
 
             <!-- Start section Approach 4: Alignment with css tables -->
             <section>
-                <h2 style="display: none;">Approach 4: Alignment with CSS Tables</h2>
+                <h2 style="display: none;">approach 4: alignment with css tables</h2>
 
                 <section>
-                    <h2>Align using CSS Tables</h2>
+                    <h2>align using css tables</h2>
                 </section>
 
                 <section>
@@ -383,7 +383,7 @@ div {
 
                 <section>
                     <h2>Define table and columns</h2>
-                    <p class="fragment" data-fragment-index="0">Wrapp boxes in a &lt;div&gt;</p>
+                    <p class="fragment" data-fragment-index="0">wrapp boxes in a &lt;div&gt;</p>
                     <div class="fragment" data-fragment-index="1">
 <pre><code><div class="table">
     <div class="box box_red column"></div>
@@ -409,7 +409,7 @@ div {
 
 
                 <section>
-                    <h2>Defining second row</h2>
+                    <h2>defining second row</h2>
 
                     <div class="fragment" data-fragment-index="0">
 <pre><code><div class="table">
@@ -427,11 +427,11 @@ div {
                              alt="Boxes with the 2 rows challenge" /><br />
                         <small>example</small></a>
 
-                    <p class="fragment" data-fragment-index="2">A wrapping container has to be defined!</p>
+                    <p class="fragment" data-fragment-index="2">a wrapping container has to be defined!</p>
                 </section>
 
                 <section>
-                    <h2>Implicit table row</h2>
+                    <h2>implicit table row</h2>
                     <div class="row">
                         <div class="col-8">
                             <div class="fragment" data-fragment-index="0">
@@ -460,10 +460,9 @@ div {
                 </section>
 
                 <section>
-                    <h2>Alignment of content in columns</h2>
+                    <h2>alignment of content in columns</h2>
                     <p class="fragment" data-fragment-index="0">
                         Set vertical alignment
-                        <small class="hljs-comment"> -- too simple! --</small>
                     </p>
                     <div class="fragment" data-fragment-index="0">
 <pre><code>.column {
@@ -479,24 +478,22 @@ div {
                 </section>
 
                 <section>
-                    <h2>Equal divided columns</h2>
-                    <p class="fragment" data-fragment-index="0">Set fix table layout and define the width of table</p>
+                    <h2>equal divided columns</h2>
+                    <p class="fragment" data-fragment-index="0">set fix table layout and define the width of table</p>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12">
                             <div class="fragment" data-fragment-index="0">
 <pre><code><div class="table">
     <div class="row">
-        <div class="box .. column">Box1</div>
-        <div class="box .. column">
-            Box2 contains.some.more.text
-            then we other ones
-        </div>
-        <div class="box .. column">Box3</div>
+        <div class="box .. column">box1</div>
+        <div class="box .. column">box2 contains.some.more....
+        <div class="box .. column">box3</div>
     </div>
     ...
 </div></code></pre>
                             </div>
                         </div>
+                    <div class="row">
                         <div class="col-6">
                             <div class="fragment" data-fragment-index="0">
 <pre><code>.table {
@@ -505,6 +502,8 @@ div {
     width: 500px;
 }</code></pre>
                             </div>
+                        </div>
+                        <div class="col-6">
                             <a class="fragment" href="http://jsfiddle.net/mvoki/wyb1umsb/26/" target="cssTableExample"
                                title="Equal devided cells example" data-fragment-index="1">
                                 <img src="img/css-tables/div-boxes-equal-devided.png" height="241" width="512"
@@ -520,9 +519,9 @@ div {
                     <div class="row">
                         <div class="col-6">
                             <div class="fragment" data-fragment-index="0">
-                                <h3>Pro</h3>
+                                <h3>pro</h3>
                                 <ul>
-                                    <li>no need of CSS float layout  in modern browser</li>
+                                    <li>no need of css float layout  in modern browser</li>
                                     <li>columns of same heights</li>
                                     <li>vertical alignment of content in cells</li>
                                     <li>proportional width of columns to fill the available space</li>
@@ -532,9 +531,9 @@ div {
                         </div>
                         <div class="col-6">
                             <div class="fragment" data-fragment-index="1">
-                                <h3>Contra</h3>
+                                <h3>Ccntra</h3>
                                 <ul>
-                                    <li>Lack of colspan and rowspan equavalance</li>
+                                    <li>lack of colspan and rowspan equavalance</li>
                                     <li>css cellspan can expand in response of the content<br>
                                         (like in html tables)</li>
                                 </ul>
@@ -543,11 +542,11 @@ div {
                     </div>
                 </section>
                 <section>
-                    <h2>'Want's to know more about CSS Tables...?!</h2>
-                    <p>Have a look into:</p>
+                    <h2>'want's to know more about css tables...?!</h2>
+                    <p>have a look into:</p>
                     <p>
-                        <em>Everything you know abut CSS is wrong!</em><br />
-                        <small>[Rachel Andrew]</small>
+                        <em>everything you know abut CSS is wrong!</em><br />
+                        <small>[rachel andrew]</small>
                     </p>
                 </section>
 
