@@ -25,7 +25,7 @@ rm -rf *
 cp -R ../reveal/css .
 cp -R ../reveal/js .
 cp -R ../reveal/lib .
-cp -R ../reveal/svg .
+cp -R ../reveal/img .
 cp -R ../reveal/plugin .
 cp -R ../reveal/*.html .
 
