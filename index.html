@@ -42,15 +42,16 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>Axploring alignment techniques</h1>
+                    <h1>Exploring alignment techniques</h1>
+                    <img src="https://avatars0.githubusercontent.com/u/11174473?v=3&s=200">
 
                     <p>FLABS-HH</p>
                 </section>
 
                 <section>
-                    <h2>Introduction</h2>
+                    <h2>Goal</h2>
 
-                    <p>explore different ways to align/arrange elements in columns in html</p>
+                    <p>Explore different ways to align/arrange elements in columns in html</p>
                     <img src="http://css-tricks.com/wp-content/csstricks-uploads/web-layout.png" alt="">
                 </section>
 
@@ -58,9 +59,8 @@
                     <h2>Alignment techniques</h2>
 
                     <ul>
-                        <li>Introduction</li>
-                        <li>Approach 1: inline-blocks</li>
-                        <li>Approach 2: css-columns</li>
+                        <li>Approach 1: inline-block</li>
+                        <li>Approach 2: css-columns (text)</li>
                         <li>Approach 3: floats</li>
                         <li>Approach 4: css tables</li>
                         <li>Approach 5 : css flexbox</li>
@@ -68,10 +68,69 @@
                 </section>
 
                 <section>
+                    <section>
+                        <h2>inline-block</h2>
+                    </section>
+                    <section>
+                        <h2>css display property</h2>
+                        <ul>
+                            <li>block</li>
+                            <li>inline</li>
+                            <li>inline-block</li>
+                            <li>...</li>
+                        </ul>
+                        <br>
+                        <small><a href="https://developer.mozilla.org/es/docs/Web/CSS/display" target="_blank">more display values</a></small>
+                    </section>
+                    <section>
+                        <h2>block elements</h2>
+                        <p>Block level elements normally start (and end) with a new line, when displayed in a browser.</p>
+                        <br>
+                        <p>Example</p>
+                        <ul>
+                            <li>h1</li>
+                            <li>p</li>
+                            <li>ul</li>
+                            <li>table</li>
+                            <li><strong>div</strong></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>inline elements</h2>
+                        <p>Inline elements are normally displayed without line breaks.</p>
+                        <br>
+                        <p>Example</p>
+                        <ul>
+                            <li>b</li>
+                            <li>a</li>
+                            <li>img</li>
+                            <li><strong>span</strong></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>inline-block to create columns</h2>
+                        <a href="http://learnlayout.com/inline-block.html" target="_blanḱ">example</a>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>CSS3 columns</h2>
+                    </section>
+                    <section>
+                        <h2>CSS3 columns</h2>
+                        <a href="http://learnlayout.com/column.html" target="_blank">example</a>
+                    </section>
+                </section>
+
+                <section>
                     <h2 style="display: none;">Approach 3: Alignment with Floats</h2>
                     <section>
-                        <h2>align using floats</h2>
+                        <h2>Align using floats</h2>
+                    </section>
 
+                    <section>
+                        <h2>Align using floats</h2>
                         <p>
                             align 3 <code>&lt;div&gt;</code>'s in a 3 columns layout.
                             <img src="img/layout-three-columns.svg" alt="">
@@ -105,7 +164,7 @@ div {
                                 <img src="img/layout-three-columns-without-float.svg" alt="">
                             </div>
                         </div>
-                        <small><a href="http://jsfiddle.net/josketres/n7y585aL/">example</a></small>
+                        <small><a href="http://jsfiddle.net/josketres/n7y585aL/" target="_blank">example</a></small>
                     </section>
 
                     <section>
@@ -126,7 +185,7 @@ div {
 
                         <img src="img/layout-three-columns-float-left.svg" alt="">
                         <br />
-                        <small><a href="http://jsfiddle.net/josketres/esnm105p/">example</a></small>
+                        <small><a href="http://jsfiddle.net/josketres/esnm105p/" target="_blank">example</a></small>
                     </section>
 
                     <section>
@@ -146,7 +205,7 @@ div {
 
                         <img src="img/layout-three-columns-float-right.svg" alt="">
                         <br />
-                        <small><a href="http://jsfiddle.net/josketres/b133vL08/">example</a></small>
+                        <small><a href="http://jsfiddle.net/josketres/b133vL08/" target="_blank">example</a></small>
                     </section>
 
                     <section>
@@ -183,8 +242,7 @@ div {
 
                         <img src="img/layout-three-columns-with-footer-1.svg" alt="">
                         <br />
-                        <small><a href="http://jsfiddle.net/josketres/827rg9qn/">example</a></small>
-                        <small><a href="http://jsfiddle.net/josketres/827rg9qn/">example</a></small>
+                        <small><a href="http://jsfiddle.net/josketres/827rg9qn/" target="_blank">example</a></small>
                     </section>
 
                     <section>
@@ -339,7 +397,7 @@ div {
 
 
 
-            <!-- Start section Approach 4: Alignment with css tables -->
+            <!-- Start section: Alignment with css tables -->
             <section>
                 <h2 style="display: none;">approach 4: alignment with css tables</h2>
 
@@ -545,14 +603,24 @@ div {
                     <a href="http://jsfiddle.net/mvoki/883oaetr/" target="cssTableExercise">Go to the exercise...</a>
                 </section>
 
-            </section><!-- end section Approach 4: Alignment with css tables -->
-
+            </section><!-- end section Alignment with css tables -->
 
 
             <section>
-                <h2>Approach 5: Flexbox</h2>
-                <a href="http://slides.com/asilvadelpozo/deck-1/">slides</a>
+                <section>
+                    <h2>Align using Flexbox</h2>
+                </section>
+                <section>
+                    <h2>Align using Flexbox</h2>
+                    <a href="http://slides.com/asilvadelpozo/deck-1/">slides</a>
+                </section>
             </section>
+
+            <section>
+                <h2>More information</h2>
+                <a href="http://learnlayout.com">learnlayout.com</a>
+            </section>
+
 
         </div>
 
