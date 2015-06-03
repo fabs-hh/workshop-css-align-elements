@@ -1,0 +1,38 @@
+.fabs-hh * {
+    box-sizing: border-box;
+}
+.fabs-hh .row:after {
+    clear: both;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.fabs-hh [class*=col-] {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.fabs-hh .col-12 {
+    width: 100%;
+}
+
+.fabs-hh .col-9 {
+    width: 75%;
+}
+
+.fabs-hh  .col-8 {
+    width: 66.66666666666667%;
+}
+
+.fabs-hh .col-6 {
+    width: 50%;
+}
+
+.fabs-hh .col-4 {
+    width: 33.33333333333333%;
+}
+
+.fabs-hh .col-3 {
+    width: 25%;
+}

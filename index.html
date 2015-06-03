@@ -16,6 +16,7 @@
               content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
         <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/fabs-hh.css">
         <link rel="stylesheet" href="css/theme/black.css" id="theme">
 
         <!-- Code syntax highlighting -->
@@ -37,62 +38,53 @@
 
     <body>
 
-        <div class="reveal">
-
+        <div class="reveal fabs-hh">
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>Exploring alignment techniques</h1>
+                    <h1>Axploring alignment techniques</h1>
 
-                    <p>flabs-hh</p>
-                </section>
-
-                <section>
-                    <h2>Workspace setup</h2>
-<pre><code data-trim>
-sudo npm install -g grunt-cli
-git clone https://github.com/fabs-hh/workshop-css-align-elements.git
-cd workshop-css-align-elements/workspace
-npm install
-grunt serve
-</code></pre>
-                </section>
-
-                <section>
-                    <h2>Agenda</h2>
-                    <ul>
-                        <li>Introduction</li>
-                        <li>Approach 1: Inline-Blocks</li>
-                        <li>Approach 2: CSS-Columns</li>
-                        <li>Approach 3: Floats</li>
-                        <li>Approach 4: CSS Tables</li>
-                        <li>Approach 5 : CSS Flexbox</li>
-                    </ul>
+                    <p>FLABS-HH</p>
                 </section>
 
                 <section>
                     <h2>Introduction</h2>
 
-                    <p>Explore different ways to align/arrange elements in columns in html</p>
+                    <p>explore different ways to align/arrange elements in columns in html</p>
                     <img src="http://css-tricks.com/wp-content/csstricks-uploads/web-layout.png" alt="">
                 </section>
 
                 <section>
+                    <h2>Alignment techniques</h2>
+
+                    <ul>
+                        <li>Introduction</li>
+                        <li>Approach 1: inline-blocks</li>
+                        <li>Approach 2: css-columns</li>
+                        <li>Approach 3: floats</li>
+                        <li>Approach 4: css tables</li>
+                        <li>Approach 5 : css flexbox</li>
+                    </ul>
+                </section>
+
+
+
+                <section>
                     <h2 style="display: none;">Approach 3: Alignment with Floats</h2>
                     <section>
-                        <h2>Align using floats</h2>
+                        <h2>align using floats</h2>
 
                         <p>
-                            Align 3 <code>&lt;div&gt;</code>'s in a 3 columns layout.
-                            <img src="svg/layout-three-columns.svg" alt="">
+                            align 3 <code>&lt;div&gt;</code>'s in a 3 columns layout.
+                            <img src="img/layout-three-columns.svg" alt="">
                         </p>
                     </section>
 
                     <section>
-                        <h3>Starting point</h3>
+                        <h3>starting point</h3>
 
-                        <div>
-                            <div style="width:70%;float:left;">
+                        <div class="row">
+                            <div class="col-9">
 <pre><code data-trim contenteditable>
 <div class="red"></div>
 <div class="yellow"></div>
@@ -101,9 +93,9 @@ grunt serve
 
 <pre><code data-trim contenteditable>
 div {
-width: 100px;
-height: 100px;
-border-radius: 6px;
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
 }
 .red { background-color: #d02b41; }
 .yellow { background-color: #ffcc52; }
@@ -111,8 +103,8 @@ border-radius: 6px;
 </code></pre>
                             </div>
 
-                            <div style="width:30%;float:left;">
-                                <img src="svg/layout-three-columns-without-float.svg" alt="">
+                            <div class="col-3">
+                                <img src="img/layout-three-columns-without-float.svg" alt="">
                             </div>
                         </div>
                         <small><a href="http://jsfiddle.net/josketres/n7y585aL/">example</a></small>
@@ -129,12 +121,12 @@ border-radius: 6px;
 <pre>
 <code data-trim contenteditable>
 div {
-...
-float: left;
+    ...
+    float: left;
 }
 </code></pre>
 
-                        <img src="svg/layout-three-columns-float-left.svg" alt="">
+                        <img src="img/layout-three-columns-float-left.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/esnm105p/">example</a></small>
                     </section>
@@ -149,12 +141,12 @@ float: left;
 </code></pre>
 <pre><code data-trim contenteditable>
 div {
-...
-float: right;
+    ...
+    float: right;
 }
 </code></pre>
 
-                        <img src="svg/layout-three-columns-float-right.svg" alt="">
+                        <img src="img/layout-three-columns-float-right.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/b133vL08/">example</a></small>
                     </section>
@@ -168,7 +160,7 @@ float: right;
 <div class="blue"></div>
 <div class="footer"></div>
 </code></pre>
-                        <img src="svg/layout-three-columns-with-footer.svg" alt="">
+                        <img src="img/layout-three-columns-with-footer.svg" alt="">
                     </section>
 
                     <section>
@@ -191,7 +183,7 @@ div {
 }
 </code></pre>
 
-                        <img src="svg/layout-three-columns-with-footer-1.svg" alt="">
+                        <img src="img/layout-three-columns-with-footer-1.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/827rg9qn/">example</a></small>
                         <small><a href="http://jsfiddle.net/josketres/827rg9qn/">example</a></small>
@@ -217,7 +209,7 @@ div {
 
                         <small><code>.footer</code> is not floated anymore, but the <code>div</code>'s are overlapped</small>
                         <br/>
-                        <img src="svg/layout-three-columns-with-footer-2.svg" alt="">
+                        <img src="img/layout-three-columns-with-footer-2.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/a8cavf91/">example</a></small>
                     </section>
@@ -239,7 +231,7 @@ div {
     clear: left;
 }
 </code></pre>
-                        <img src="svg/layout-three-columns-with-footer.svg" alt="">
+                        <img src="img/layout-three-columns-with-footer.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/mLwjvg0t/">example</a></small>
                     </section>
@@ -254,14 +246,14 @@ div {
     <div class="blue box"></div>
 </div>
 </code></pre>
-                        <img src="svg/layout-three-columns-with-container.svg" alt="">
+                        <img src="img/layout-three-columns-with-container.svg" alt="">
                     </section>
 
                     <section>
                         <h3>container style</h3>
-                        <div>
+                        <div class="row">
 
-                            <div style="width:50%; float:left">
+                            <div class="col-6">
 <pre><code data-trim contenteditable>
 <div class="container">
     <div class="red box"></div>
@@ -271,7 +263,7 @@ div {
 </code></pre>
                         </div>
 
-                        <div style="width:50%; float:left">
+                        <div class="col-6">
 <pre><code data-trim contenteditable>
 .box {
     width: 100px;
@@ -288,17 +280,17 @@ div {
                             </div>
                         </div>
 
-                        <small>The height of the parent element collapses to nothing! =(</small>
+                        <small>the height of the parent element collapses to nothing! =(</small>
                         <br/>
-                        <img src="svg/layout-three-columns-with-container-1.svg" alt="">
+                        <img src="img/layout-three-columns-with-container-1.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/tfvybush/">example</a></small>
                     </section>
 
                     <section>
-                        <h3>Clear Floats 1</h3>
+                        <h3>clear floats 1</h3>
 
-                        <small>The collapse problem can be fixed by clearing the floats <strong>after</strong> the floated
+                        <small>the collapse problem can be fixed by clearing the floats <strong>after</strong> the floated
                             elements in the container, but <strong>before</strong> the close of the container.
                         </small>
 <pre><code data-trim contenteditable>
@@ -313,16 +305,16 @@ div {
                         <!-- Note: -->
                         <!-- <div .. /> -> Self-closing syntax (/>) used on a non-void HTML element. Ignoring the slash and treating as a start tag. (W3CValidation) -->
 
-                        <img src="svg/layout-three-columns-with-container-2.svg" alt="">
+                        <img src="img/layout-three-columns-with-container-2.svg" alt="">
                         <br />
                         <small><a href="http://jsfiddle.net/josketres/r30fdgwx/">example</a></small>
                     </section>
 
                     <section>
-                        <h3>Clear Floats 2</h3>
+                        <h3>clear floats 2</h3>
 
-                        <div>
-                            <div style="width:50%; float:left">
+                        <div class="row">
+                            <div class="col-6">
 <pre><code data-trim contenteditable>
 <div class="container clearfix">
     <div class="red box"></div>
@@ -331,7 +323,7 @@ div {
 </div>
 </code></pre>
                             </div>
-                            <div style="width:50%; float:left">
+                            <div class="col-6">
 <pre><code data-trim contenteditable>
 .clearfix:after {
     content: ".";
@@ -346,9 +338,224 @@ div {
                         <small><a href="http://jsfiddle.net/josketres/xrkk5733/">example</a></small>
                     </section>
             </section><!-- end explaining floats approach -->
+
+
+
+            <!-- Start section Approach 4: Alignment with css tables -->
             <section>
-                <h2>Approach 4: Alignment with CSS Tables</h2>
+                <h2 style="display: none;">approach 4: alignment with css tables</h2>
+
+                <section>
+                    <h2>align using css tables</h2>
+                </section>
+
+                <section>
+                    <h2>Starting Point</h2>
+
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="fragment" data-fragment-index="0">
+<pre><code>
+<div class="box box_red"></div>
+<div class="box box_green"></div>
+<div class="box box_blue"></div>
+
+</code></pre>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <a class="fragment" href="http://jsfiddle.net/mvoki/wyb1umsb/" target="cssTableExample" title="open example"
+                               data-fragment-index="1">
+                                <img src="img/css-tables/div-boxes.png" height="357" width="127"
+                                     alt="Boxes without alignment are placed under each over" /><br />
+                                    <small data-fragment-index="1">example</small></a>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Define table and columns</h2>
+                    <p class="fragment" data-fragment-index="0">wrapp boxes in a &lt;div&gt;</p>
+                    <div class="fragment" data-fragment-index="1">
+<pre><code><div class="table">
+    <div class="box box_red column"></div>
+    <div class="box box_green column"></div>
+    <div class="box box_blue column"></div>
+</div></code></pre>
+                    </div>
+
+                    <div class="fragment" data-fragment-index="2">
+<pre><code>.table {
+    display: table;
+}
+.column {
+    display: table-cell;
+}</code></pre>
+                    </div>
+                    <a class="fragment" href="http://jsfiddle.net/mvoki/rtth53a4/" target="cssTableExample"
+                       title="open table example step1" data-fragment-index="3">
+                        <img src="img/css-tables/div-boxes-table.png" height="128" width="355"
+                             alt="Boxes with the very first left alignment to each other" /><br />
+                        <small>example</small></a>
+                </section>
+
+
+                <section>
+                    <h2>defining second row</h2>
+
+                    <div class="fragment" data-fragment-index="0">
+<pre><code><div class="table">
+    <div class="box box-red column"></div>
+    <div class="box box-green column"></div>
+    <div class="box box-blue column"></div>
+    <div class="box box-red column"></div>
+    <div class="box box-green column"></div>
+    <div class="box box-blue column"></div>
+</div></code></pre>
+                    </div>
+                    <a class="fragment" href="http://jsfiddle.net/mvoki/0g50kf9L/" target="cssTableExample"
+                       title="open table example 2 rows challenge" data-fragment-index="1">
+                        <img src="img/css-tables/div-boxes-2rows-challenge.png" height="126" width="694"
+                             alt="Boxes with the 2 rows challenge" /><br />
+                        <small>example</small></a>
+
+                    <p class="fragment" data-fragment-index="2">a wrapping container has to be defined!</p>
+                </section>
+
+                <section>
+                    <h2>implicit table row</h2>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="fragment" data-fragment-index="0">
+<pre><code><div class="table">
+    <div>
+        <div class="box ... column"></div>
+        <div class="box ... column"></div>
+        <div class="box ... column"></div>
+    </div>
+    <div>
+        <div class="box ...column"></div>
+        <div class="box ... column"></div>
+        <div class="box ... column"></div>
+    </div>
+</div></code></pre>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <a class="fragment" href="http://jsfiddle.net/mvoki/wuyz3r1h/" target="cssTableExample"
+                               title="open table example 2 rows solution" data-fragment-index="1">
+                                <img src="img/css-tables/div-boxes-2rows.png" height="242" width="354"
+                                     alt="Boxes with the 2 rows solution" /><br />
+                                <small>example</small></a>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>alignment of content in columns</h2>
+                    <p class="fragment" data-fragment-index="0">
+                        Set vertical alignment
+                    </p>
+                    <div class="fragment" data-fragment-index="0">
+<pre><code>.column {
+    ...
+    vertical-align: middle;
+}</code></pre>
+                    </div>
+                   <a class="fragment" href="http://jsfiddle.net/mvoki/5xd2b3gx/" target="cssTableExample"
+                       title="vertical alignment of elements in a cell" data-fragment-index="1">
+                        <img src="img/css-tables/div-boxes-valignment.png" height="239" width="352"
+                             alt="Boxes with vertical aligned content" /><br />
+                        <small>example</small></a>
+                </section>
+
+                <section>
+                    <h2>equal divided columns</h2>
+                    <p class="fragment" data-fragment-index="0">set fix table layout and define the width of table</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="fragment" data-fragment-index="0">
+<pre><code><div class="table">
+    <div class="row">
+        <div class="box .. column">box1</div>
+        <div class="box .. column">box2 contains.some.more....
+        <div class="box .. column">box3</div>
+    </div>
+    ...
+</div></code></pre>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="fragment" data-fragment-index="0">
+<pre><code>.table {
+    ...
+    table-layout: fixed;
+    width: 500px;
+}</code></pre>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <a class="fragment" href="http://jsfiddle.net/mvoki/ktpxh1nz/" target="cssTableExample"
+                               title="Equal devided cells example" data-fragment-index="1">
+                                <img src="img/css-tables/div-boxes-equal-devided.png" height="241" width="512"
+                                     alt="Equal devided cells example" /><br />
+                                <small>example</small></a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="">
+                    <h2>Conclusion</h2>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="fragment" data-fragment-index="0">
+                                <h3>pro</h3>
+                                <ul>
+                                    <li>no need of css float layout  in modern browser</li>
+                                    <li>columns of same heights</li>
+                                    <li>vertical alignment of content in cells</li>
+                                    <li>proportional width of columns to fill the available space</li>
+                                    <li>easy reordering of container</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fragment" data-fragment-index="1">
+                                <h3>Ccntra</h3>
+                                <ul>
+                                    <li>lack of colspan and rowspan equavalance</li>
+                                    <li>css cellspan can expand in response of the content<br>
+                                        (like in html tables)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>want's to know more about css tables...?!</h2>
+                    <p>have a look into:</p>
+                    <p>
+                        <em>everything you know abut CSS is wrong!</em><br />
+                        <small>[rachel andrew]</small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>let's try it out!</h2>
+                    <a href="http://jsfiddle.net/mvoki/883oaetr/" target="cssTableExercise">Go to the exercise...</a>
+                </section>
+
+            </section><!-- end section Approach 4: Alignment with css tables -->
+
+
+
+            <section>
+                <h2>Approach 5: Flexbox</h2>
+                <a href="http://slides.com/asilvadelpozo/deck-1/">slides</a>
             </section>
+
         </div>
 
     </div>
